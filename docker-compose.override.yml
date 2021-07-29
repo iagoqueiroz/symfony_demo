@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      target: app-dev
+    volumes:
+      - ./:/app:rw,cached
+
+  web:
+    ports: 
+      - 8080:80
